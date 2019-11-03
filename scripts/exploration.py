@@ -6,7 +6,7 @@ import numpy as np
 
 def correlation_matrix(df, title):
     # Remove the row id from the data frame
-    df = df.drop('row id', 1)
+    df = df.drop('id', 1)
 
     # Set up the matrix plot and display
     f, ax = plt.subplots(figsize=(20, 16))
@@ -72,9 +72,12 @@ def bar_chart(df, title, **kwargs):
 
 
 def scatter_plot(df_x, df_y, df_z, title, **kwargs):
-    # Colour the points gold if they resulted in a conversion
-    colouring = ['gold' if value == 'yes' else 'C0' for value in df_z.values]
-    plt.scatter(df_x, df_y, c=colouring)
+    # Colour the points gold if there is a third value
+    if df_z:
+        colouring = ['gold' if value == 'yes' else 'C0' for value in df_z.values]
+        plt.scatter(df_x, df_y, c=colouring)
+    else:
+        plt.scatter(df_x, df_y)
     plt.title(title)
     plt.xlabel(kwargs.get('xlabel') if kwargs.get('xlabel') else 'x value')
     plt.ylabel(kwargs.get('ylabel') if kwargs.get('ylabel') else 'y value')

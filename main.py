@@ -25,11 +25,14 @@ df = pd.read_csv('gameplay_report.csv')
 #
 # # Combine the original data to the processed data for analysis
 # concatenated_df = pd.concat([df, processed_df], axis=1, sort=False)
-#
-#
-# # Display a correlation matrix for the entire data set
-# exp.correlation_matrix(concatenated_df, 'Banking Campaign - Correlation Matrix')
-#
+
+
+# Display a correlation matrix for the entire data set
+#exp.correlation_matrix(df, 'Correlation Matrix')
+
+test_df = df[(df.entity_type == 'tree') & (df.event_type == 'spawned')]
+exp.location_heatmap(test_df, 'pos_x', 'pos_y', 'Heatmap')
+
 # # Display an event plot and bar chart for age
 # exp.event_plot(df['age'], 'Age', orientation='vertical')
 # exp.bar_chart(df['age.discretised'], 'Age Groups')
@@ -38,6 +41,5 @@ df = pd.read_csv('gameplay_report.csv')
 # exp.histogram(df['duration'], 'Contact Durations', 30, (0, 2000))
 
 # Display a scatter plot depicting age on duration
-this_df = df[(df.entity_type == 'dude') & (df.event_type == 'spawned_building')]
-exp.scatter_plot(this_df['pos_x'], this_df['pos_y'], None,
-                 'Dude Building Creation', xlabel='x-coordinate', ylabel='y-coordinate')
+# exp.scatter_plot(test_df['pos_x'], test_df['pos_y'], None,
+#                  'Dude Building Creation', xlabel='x-coordinate', ylabel='y-coordinate')

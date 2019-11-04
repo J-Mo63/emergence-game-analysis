@@ -1,6 +1,6 @@
 # Import libraries
-import matplotlib.pyplot as plt
 import matplotlib
+import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import imageio
@@ -11,6 +11,7 @@ def time_animate_graph(graph, df, x_col, y_col, title):
     imageio.mimsave('../output/animated_graph.gif',
                     [graph(df, i*10000, x_col, y_col, title) for i in range(31)],
                     fps=10)
+    matplotlib.use('module://backend_interagg')
 
 
 def location_heatmap(df, i, x_col, y_col, title):

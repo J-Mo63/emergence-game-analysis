@@ -6,19 +6,21 @@ import numpy as np
 import imageio
 
 
-def location_heatmap(df, x_col, y_col, title):
+def time_animate_graph(graph, df, x_col, y_col, title):
     matplotlib.use('Agg')
-    kwargs_write = {'fps': 1.0, 'quantizer': 'nq'}
-    imageio.mimsave('./animation.gif', [plot_heatmap(df, i*10000) for i in range(31)], fps=10)
+    imageio.mimsave('../output/animated_graph.gif',
+                    [graph(df, i*10000, x_col, y_col, title) for i in range(31)],
+                    fps=10)
 
-def plot_heatmap(df, i):
+
+def location_heatmap(df, i, x_col, y_col, title):
     curr_df = df[(df.time <= i)]
-    plt.hist2d(curr_df['pos_x'].values, curr_df['pos_y'].values, bins=[30, 20], range=[[-500, 1500], [-500, 1000]])
+    plt.hist2d(curr_df[x_col].values, curr_df[y_col].values, bins=[30, 20], range=[[-500, 1500], [-500, 1000]])
     plt.gca().invert_yaxis()
     fig = plt.gcf()
+    plt.title(title)
 
-    #Used to return the plot as an image rray
-    fig.canvas.draw()  # draw the canvas, cache the renderer
+    fig.canvas.draw()
     image = np.frombuffer(fig.canvas.tostring_rgb(), dtype='uint8')
     image = image.reshape(fig.canvas.get_width_height()[::-1] + (3,))
 

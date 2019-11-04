@@ -28,11 +28,17 @@ def location_heatmap(df, i, x_col, y_col, title):
     return image
 
 
-def correlation_matrix(df, title):
+def correlation_matrix(df, title, **kwargs):
+    if kwargs.get('exclude_features'):
+        for feature in kwargs.get('exclude_features'):
+            df.drop(feature, axis=1, inplace=True)
+
     # Set up the matrix plot and display
     f, ax = plt.subplots(figsize=(20, 16))
     corr = df.corr()
-    sns.heatmap(corr, mask=np.zeros_like(corr, dtype=np.bool),
+    mask = np.zeros_like(corr)
+    mask[np.triu_indices_from(mask)] = True
+    sns.heatmap(corr, mask=mask,
                 cmap=sns.diverging_palette(220, 10, as_cmap=True),
                 square=True, ax=ax).set_title(title)
     plt.show()

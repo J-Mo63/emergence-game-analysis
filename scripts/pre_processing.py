@@ -23,41 +23,19 @@ def discretise_age(df):
     return discretised_list
 
 
-def binarise_y_n(df):
-    # Isolate the values from the data frame
-    df = df.values
-
-    # Format the binarised items into one boolean column
-    binarised_y_n_list = []
-    for i in range(len(df)):
-        item = df[i]
-        if item == 'yes':
-            binarised_y_n_list.append(1)
-        else:
-            binarised_y_n_list.append(0)
-
-    # Return the results as a list
-    return binarised_y_n_list
-
-
-def binarise_marital(df):
-    # Isolate the values from the data frame
-    df = df.values
-
+def binarise(df):
     # Binarise the categories
-    binarised = preprocessing.LabelBinarizer().fit_transform(df)
-
-    # Format the binarised items into three columns
-    binarised_married_list = []
-    binarised_single_list = []
-    binarised_divorced_list = []
-    for i in range(len(binarised)):
-        item = binarised[i]
-        binarised_divorced_list.append(item[0])
-        binarised_married_list.append(item[1])
-        binarised_single_list.append(item[2])
-
-    # Return the results as a dictionary
-    return {'married': binarised_married_list,
-            'single': binarised_single_list,
-            'divorced': binarised_divorced_list}
+    binarised = preprocessing.LabelBinarizer().fit_transform(df.values)
+    # Get the labels and sort them
+    labels = df.unique().tolist()
+    labels.sort()
+    # Append the binarised values to a dictionary
+    binarised_dict = {}
+    for item in binarised:
+        for i in range(len(labels)):
+            label = labels[i]
+            if label not in binarised_dict:
+                binarised_dict[label] = []
+            binarised_dict[label].append(item[i])
+    # Return the dictionary
+    return binarised_dict

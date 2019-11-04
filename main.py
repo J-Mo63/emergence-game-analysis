@@ -7,35 +7,28 @@ import pandas as pd
 # Import the data and read from Excel file
 df = pd.read_csv('gameplay_report.csv')
 
-# # Perform discretisation for 'age'
-# discretised_age = prep.discretise_age(df['age'])
-#
-# # Perform binarisation for 'marital'
-# binarised_marital = prep.binarise_marital(df['marital'])
-#
-# # Perform binarisation for 'y'
-# binarised_y = prep.binarise_y_n(df['y'])
-#
-# # Create a combined data frame of pre-processed data for analysis
-# processed_df = pd.DataFrame({
-#     'Married': binarised_marital['married'],
-#     'Y': binarised_y
-# })
-#
-#
-# # Combine the original data to the processed data for analysis
-# concatenated_df = pd.concat([df, processed_df], axis=1, sort=False)
+
+df['event_key'] = df.entity_type.map(str) + '_' + df.event_type
 
 
-# Display a correlation matrix for the entire data set
-#exp.correlation_matrix(df, 'Correlation Matrix')
+binarised_event_keys = prep.binarise(df.event_key)
 
-test_df = df[(df.entity_type == 'tree') & (df.event_type == 'spawned')]
-exp.location_heatmap(test_df, 'pos_x', 'pos_y', 'Heatmap')
+processed_df = pd.DataFrame()
+for event_key in binarised_event_keys.keys():
+    processed_df[event_key] = binarised_event_keys[event_key]
+
+concatenated_df = pd.concat([df, processed_df], axis=1, sort=False)
+
+
+
+exp.correlation_matrix(concatenated_df, 'Correlation Matrix')
+
+test_df = df[(df.event_key == 'dude_fixed_building')]
+
 
 exp.histogram(test_df.time, 'Buildings Fixed Over Time', 30, (0, 300000))
 
-# exp.time_animate_graph(exp.location_heatmap, test_df, 'pos_x', 'pos_y', 'Heatmap')
+exp.time_animate_graph(exp.location_heatmap, test_df, 'pos_x', 'pos_y', 'Heatmap')
 
 
 

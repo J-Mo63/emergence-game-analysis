@@ -1,3 +1,4 @@
+imageio
 seaborn
 matplotlib
 numpy

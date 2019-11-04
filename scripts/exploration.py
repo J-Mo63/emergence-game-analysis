@@ -38,19 +38,6 @@ def correlation_matrix(df, title):
     plt.show()
 
 
-def event_plot(df, title, **kwargs):
-    # Load in the values to a vertical event plot
-    plt.eventplot(df, orientation=kwargs.get('orientation'))
-
-    # Set the graph values and display
-    plt.title(title)
-    if kwargs.get('orientation') == 'vertical':
-        plt.gca().axes.get_xaxis().set_visible(False)
-    else:
-        plt.gca().axes.get_yaxis().set_visible(False)
-    plt.show()
-
-
 def bar_chart(df, title, **kwargs):
     # Get the values and counts from the data frame
     value_counts = df.value_counts()

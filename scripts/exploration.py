@@ -18,7 +18,8 @@ def location_heatmap(df, i, x_col, y_col, title):
     plt.hist2d(curr_df[x_col].values, curr_df[y_col].values, bins=[30, 20], range=[[-500, 1500], [-500, 1000]])
     plt.gca().invert_yaxis()
     fig = plt.gcf()
-    plt.title(title)
+    time = "{:02.2f}".format(i/60000).replace(".", ":")
+    plt.title(title + ' (' + time + ' minutes)')
 
     fig.canvas.draw()
     image = np.frombuffer(fig.canvas.tostring_rgb(), dtype='uint8')
@@ -28,9 +29,6 @@ def location_heatmap(df, i, x_col, y_col, title):
 
 
 def correlation_matrix(df, title):
-    # Remove the row id from the data frame
-    df = df.drop('id', 1)
-
     # Set up the matrix plot and display
     f, ax = plt.subplots(figsize=(20, 16))
     corr = df.corr()

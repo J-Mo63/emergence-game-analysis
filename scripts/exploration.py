@@ -106,7 +106,7 @@ def scatter_plot(df_x, df_y, df_z, title, **kwargs):
 
 
 def histogram(df, title, bins, display_range, **kwargs):
-    plt.hist(df, density=1, bins=bins, range=display_range)
+    plt.hist(df, bins=bins, range=display_range)
     plt.ylabel(kwargs.get('ylabel') if kwargs.get('ylabel') else 'Amount')
     plt.title(title)
     plt.show()

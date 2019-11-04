@@ -33,12 +33,18 @@ df = pd.read_csv('gameplay_report.csv')
 test_df = df[(df.entity_type == 'tree') & (df.event_type == 'spawned')]
 exp.location_heatmap(test_df, 'pos_x', 'pos_y', 'Heatmap')
 
+exp.histogram(test_df.time, 'Buildings Fixed Over Time', 30, (0, 300000))
+
+# exp.time_animate_graph(exp.location_heatmap, test_df, 'pos_x', 'pos_y', 'Heatmap')
+
+
+
+
+
 # # Display an event plot and bar chart for age
 # exp.event_plot(df['age'], 'Age', orientation='vertical')
 # exp.bar_chart(df['age.discretised'], 'Age Groups')
-#
-# # Display a histogram for duration
-# exp.histogram(df['duration'], 'Contact Durations', 30, (0, 2000))
+
 
 # Display a scatter plot depicting age on duration
 # exp.scatter_plot(test_df['pos_x'], test_df['pos_y'], None,

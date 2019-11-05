@@ -4,14 +4,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import imageio
-import itertools
 from scipy.signal import savgol_filter
 from scipy.interpolate import interp1d
 
 
-def time_animate_graph(graph, df, x_col, y_col, title):
+def time_animate_graph(graph, df, x_col, y_col, title, filename):
     matplotlib.use('Agg')
-    imageio.mimsave('../output/animated_graph.gif',
+    imageio.mimsave('../output/' + filename + '.gif',
                     [graph(df, i*10000, x_col, y_col, title) for i in range(31)],
                     fps=10)
     matplotlib.use('module://backend_interagg')

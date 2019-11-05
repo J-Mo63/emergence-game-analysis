@@ -67,7 +67,7 @@ def histogram(df, title, bins, display_range, **kwargs):
     plt.show()
 
 
-def line_graphs(dfs, x_col, y_col, title, **kwargs):
+def line_graph(dfs, x_col, y_col, title, **kwargs):
     df_keys = list(dfs.keys())
     for i in range(len(df_keys)):
         df_key = df_keys[i]
@@ -88,4 +88,3 @@ def line_graphs(dfs, x_col, y_col, title, **kwargs):
     plt.ylabel(kwargs.get('ylabel') if kwargs.get('ylabel') else 'y value')
     plt.legend()
     plt.show()
-

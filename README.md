@@ -6,34 +6,34 @@ This repository features an unsupervised analysis of emergent game data (which c
 
 ### Game World Location Heatmaps
 
-![Heatmap of Trees Spawned Over Time](visualisations/v1/heat_trees_spawned.gif)
+<img src="visualisations/v1/heat_trees_spawned.gif" width="20">
 
-![Heatmap of Trees Harvested Over Time](visualisations/v1/heat_trees_harvested.gif)
+<img src="visualisations/v1/heat_trees_harvested.gif" width="20">
 
-![Heatmap of Buildings Spawned Over Time](visualisations/v1/heat_buildings_spawned.gif)
+<img src="visualisations/v1/heat_buildings_spawned.gif" width="20">
 
 ### Event Time Histograms
 
-![Histogram of Trees Spawned Over Time](visualisations/v1/hist_tree_growth.png)
+<img src="visualisations/v1/hist_tree_growth.png" width="20">
 
-![Histogram of Trees Spawned Over Time](visualisations/v1/hist_buildings_spawned.png)
+<img src="visualisations/v1/hist_buildings_spawned.png" width="20">
 
-![Histogram of Trees Spawned Over Time](visualisations/v1/hist_buildings_fixed.png)
+<img src="visualisations/v1/hist_buildings_fixed.png" width="20">
 
 ### Parameter Check Line Graphs
 
-![Line Graph of Tree Population Over Time](visualisations/v1/line_tree_pop.png)
+<img src="visualisations/v1/line_tree_pop.png" width="20">
 
-![Line Graph of Dude Population Over Time](visualisations/v1/line_dude_pop.png)
+<img src="visualisations/v1/line_dude_pop.png" width="20">
 
-![Line Graph of Food Population Over Time](visualisations/v1/line_food_pop.png)
+<img src="visualisations/v1/line_food_pop.png" width="20">
 
-![Line Graph of Plant Population Over Time](visualisations/v1/line_plant_pop.png)
+<img src="visualisations/v1/line_plant_pop.png" width="20">
 
-![Line Graph of Building Population Over Time](visualisations/v1/line_building_pop.png)
+<img src="visualisations/v1/line_building_pop.png" width="20">
 
 ### Correlation Matrices
 
-![Correlation Matrix of Summary Statistics](visualisations/v1/summary_stat_correlation_matrix.png)
+<img src="visualisations/v1/summary_stat_correlation_matrix.png" width="20">
 
-![Correlation Matrix of Parameters](visualisations/v1/param_correlation_matrix.png)
+<img src="visualisations/v1/param_correlation_matrix.png" width="20">

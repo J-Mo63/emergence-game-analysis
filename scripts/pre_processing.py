@@ -2,27 +2,6 @@
 from sklearn import preprocessing
 
 
-def discretise_age(df):
-    # Isolate the values from the data frame
-    df = df.values
-
-    # Discretise the age into categories
-    discretised_list = []
-    for i in range(df.size):
-        item = df[i]
-        if item < 45:
-            discretised_list.append('Adult')
-        elif item <= 65:
-            discretised_list.append('Mid-age')
-        elif item > 65:
-            discretised_list.append('Old-age')
-        else:
-            discretised_list.append('NaN')
-
-    # Return the results as a list
-    return discretised_list
-
-
 def binarise(df):
     # Binarise the categories
     binarised = preprocessing.LabelBinarizer().fit_transform(df.values)

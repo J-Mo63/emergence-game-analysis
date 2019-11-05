@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import imageio
+import itertools
+from scipy.signal import savgol_filter
+from scipy.interpolate import interp1d
 
 
 def time_animate_graph(graph, df, x_col, y_col, title):
@@ -104,3 +107,27 @@ def histogram(df, title, bins, display_range, **kwargs):
     plt.ylabel(kwargs.get('ylabel') if kwargs.get('ylabel') else 'Amount')
     plt.title(title)
     plt.show()
+
+
+def line_graphs(dfs, x_col, y_col, title, **kwargs):
+    df_keys = list(dfs.keys())
+    for i in range(len(df_keys)):
+        df_key = df_keys[i]
+        df = dfs[df_key]
+
+        xx = np.linspace(df[x_col].min(), df[x_col].max(), 1000)
+
+        # interpolate + smooth
+        itp = interp1d(df[x_col], df[y_col], kind='linear')
+        yy = savgol_filter(itp(xx), 101, 3)
+
+        label = df_key.replace('param_reports/game_param_report_', '').replace('.csv', '')
+        style = '--' if i >= 10 else '-'
+        plt.plot(xx, yy, style, label=label)
+
+    plt.title(title)
+    plt.xlabel(kwargs.get('xlabel') if kwargs.get('xlabel') else 'x value')
+    plt.ylabel(kwargs.get('ylabel') if kwargs.get('ylabel') else 'y value')
+    plt.legend()
+    plt.show()
+

@@ -21,3 +21,19 @@ The first iteration of the experiment's codebase can be [viewed under the "v1" t
 ### Correlation Matrices
 
 <img src="visualisations/v1/summary_stat_correlation_matrix.png" width="400"> <img src="visualisations/v1/param_correlation_matrix.png" width="400">
+
+## Game Version 2 Visualisations
+
+The second iteration of the experiment's codebase can be [viewed under the "v2" tag](https://github.com/J-Mo63/emergence-test-bed/releases/tag/v2), which is defined in the below visuals as test `base_v2`. It utilises the combination of features from the tests:
+- dude_speed_+20
+- plant_growth_rate_-5
+
+Using this information, the plant growth rate was reduced from 15 seconds by 5 seconds and the speed of dudes was increased by 10 (only half of the amount it was increased by in the test). This resulted in the **preservation of food and tree populations** as well as the **reduction of tree growth to under 500 instances**.
+
+### Parameter Check Line Graphs
+
+<img src="visualisations/v1/line_tree_pop.png" width="400"> <img src="visualisations/v1/line_dude_pop.png" width="400"> <img src="visualisations/v1/line_food_pop.png" width="400"> <img src="visualisations/v1/line_plant_pop.png" width="400"> <img src="visualisations/v1/line_building_pop.png" width="400">
+
+### Game World Location Heatmaps
+
+<img src="visualisations/v2/heat_tree_spawned.gif" width="400"> <img src="visualisations/v2/heat_dude_harvested_resource_tree.gif" width="400"> <img src="visualisations/v2/heat_building_spawned.gif" width="400"> <img src="visualisations/v2/heat_dude_fixed_building.gif" width="400">

@@ -72,10 +72,8 @@ def line_graph(dfs, x_col, y_col, title, **kwargs):
     for i in range(len(df_keys)):
         df_key = df_keys[i]
         df = dfs[df_key]
-
+        # Interpolate & smooth lines
         xx = np.linspace(df[x_col].min(), df[x_col].max(), 1000)
-
-        # interpolate + smooth
         itp = interp1d(df[x_col], df[y_col], kind='linear')
         yy = savgol_filter(itp(xx), 101, 3)
         # Hide the full file path
@@ -83,11 +81,12 @@ def line_graph(dfs, x_col, y_col, title, **kwargs):
         if kwargs.get('mask_paths'):
             for path in kwargs.get('mask_paths'):
                 label = label.replace(path, '').replace('.csv', '')
+        # Cycle into dashed lines after nine cases
         style = '--' if i >= 10 else '-'
         plt.plot(xx, yy, style, label=label)
-
+    # Display the graph
     plt.title(title)
     plt.xlabel(kwargs.get('xlabel') if kwargs.get('xlabel') else 'x value')
     plt.ylabel(kwargs.get('ylabel') if kwargs.get('ylabel') else 'y value')
-    plt.legend()
+    plt.legend(loc='upper left')
     plt.show()

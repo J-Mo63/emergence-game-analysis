@@ -32,8 +32,8 @@ Using this information, the plant growth rate was reduced from 15 seconds by 5 s
 
 ### Parameter Check Line Graphs
 
-<img src="visualisations/v1/line_tree_pop.png" width="400"> <img src="visualisations/v1/line_dude_pop.png" width="400"> <img src="visualisations/v1/line_food_pop.png" width="400"> <img src="visualisations/v1/line_plant_pop.png" width="400"> <img src="visualisations/v1/line_building_pop.png" width="400">
+<img src="visualisations/v1_2/line_tree_pop.png" width="400"> <img src="visualisations/v1_2/line_dude_pop.png" width="400"> <img src="visualisations/v1_2/line_food_pop.png" width="400"> <img src="visualisations/v1_2/line_plant_pop.png" width="400"> <img src="visualisations/v1_2/line_building_pop.png" width="400">
 
 ### Game World Location Heatmaps
 
-<img src="visualisations/v2/heat_tree_spawned.gif" width="400"> <img src="visualisations/v2/heat_dude_harvested_resource_tree.gif" width="400"> <img src="visualisations/v2/heat_building_spawned.gif" width="400"> <img src="visualisations/v2/heat_dude_fixed_building.gif" width="400">
+<img src="visualisations/v1_2/heat_tree_spawned.gif" width="400"> <img src="visualisations/v1_2/heat_dude_harvested_resource_tree.gif" width="400"> <img src="visualisations/v1_2/heat_building_spawned.gif" width="400"> <img src="visualisations/v1_2/heat_dude_fixed_building.gif" width="400">

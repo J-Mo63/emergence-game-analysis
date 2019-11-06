@@ -41,3 +41,20 @@ Using this information, the plant growth rate was reduced from 15 seconds by 5 s
 ### Parameter Check Line Graphs (New Tests)
 
 <img src="visualisations/v2/line_tree_pop.png" width="400"> <img src="visualisations/v2/line_dude_pop.png" width="400"> <img src="visualisations/v2/line_food_pop.png" width="400"> <img src="visualisations/v2/line_plant_pop.png" width="400"> <img src="visualisations/v2/line_building_pop.png" width="400">
+
+## Game Version 3 Visualisations
+
+The third iteration of the experiment's codebase can be [viewed under the "v3" tag](https://github.com/J-Mo63/emergence-test-bed/releases/tag/v3), which is defined in the below visuals as test `base_v3`. It utilises the combination of features from the tests:
+- tree_spawn_+0.4
+- quarry_health_-30
+- food_spawn_rate_-1
+
+An issue identified in `base_v2` was that it created an overabundance of food. Using the information found, **this value was greatly reduced while preserving tree growth**.
+
+### Parameter Check Line Graphs (Previous Tests)
+
+<img src="visualisations/v2_3/line_tree_pop.png" width="400"> <img src="visualisations/v2_3/line_dude_pop.png" width="400"> <img src="visualisations/v2_3/line_food_pop.png" width="400"> <img src="visualisations/v2_3/line_plant_pop.png" width="400"> <img src="visualisations/v2_3/line_building_pop.png" width="400">
+
+### Game World Location Heatmaps
+
+<img src="visualisations/v2_3/heat_tree_spawned.gif" width="400"> <img src="visualisations/v2_3/heat_dude_harvested_resource_tree.gif" width="400"> <img src="visualisations/v2_3/heat_building_spawned.gif" width="400"> <img src="visualisations/v2_3/heat_dude_fixed_building.gif" width="400">

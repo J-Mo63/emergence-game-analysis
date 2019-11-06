@@ -9,7 +9,9 @@ from glob import glob
 event_df_v1 = pd.read_csv('v1/game_event_report.csv')
 event_df_v1['event_key'] = event_df_v1.entity_type.map(str) + '_' + event_df_v1.event_type
 event_df_v2 = pd.read_csv('v2/game_event_report.csv')
-event_df_v2['event_key'] = event_df_v1.entity_type.map(str) + '_' + event_df_v1.event_type
+event_df_v2['event_key'] = event_df_v2.entity_type.map(str) + '_' + event_df_v2.event_type
+event_df_v3 = pd.read_csv('v3/game_event_report.csv')
+event_df_v3['event_key'] = event_df_v3.entity_type.map(str) + '_' + event_df_v3.event_type
 
 # Get a list of all param reports in the folders and sort them
 param_reports_v1 = glob('v1/param_reports/*.csv')
@@ -93,8 +95,8 @@ def line_graph_params(param_reports):
 
 
 # Run features
-line_graph_params(param_reports_v2_3)
+# line_graph_params(param_reports_v2_3)
 # correlation_matrix_params(param_reports_v1)
-# animated_heatmap_events(event_df_v2)
+animated_heatmap_events(event_df_v3)
 # correlation_matrix_events(event_df_v1)
 # histogram_events(event_df_v1)

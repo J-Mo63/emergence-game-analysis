@@ -30,10 +30,14 @@ The second iteration of the experiment's codebase can be [viewed under the "v2" 
 
 Using this information, the plant growth rate was reduced from 15 seconds by 5 seconds and the speed of dudes was increased by 10 (only half of the amount it was increased by in the test). This resulted in the **preservation of food and tree populations** as well as the **reduction of tree growth to under 500 instances**.
 
-### Parameter Check Line Graphs
+### Parameter Check Line Graphs (Previous Tests)
 
 <img src="visualisations/v1_2/line_tree_pop.png" width="400"> <img src="visualisations/v1_2/line_dude_pop.png" width="400"> <img src="visualisations/v1_2/line_food_pop.png" width="400"> <img src="visualisations/v1_2/line_plant_pop.png" width="400"> <img src="visualisations/v1_2/line_building_pop.png" width="400">
 
 ### Game World Location Heatmaps
 
 <img src="visualisations/v1_2/heat_tree_spawned.gif" width="400"> <img src="visualisations/v1_2/heat_dude_harvested_resource_tree.gif" width="400"> <img src="visualisations/v1_2/heat_building_spawned.gif" width="400"> <img src="visualisations/v1_2/heat_dude_fixed_building.gif" width="400">
+
+### Parameter Check Line Graphs (New Tests)
+
+<img src="visualisations/v2/line_tree_pop.png" width="400"> <img src="visualisations/v2/line_dude_pop.png" width="400"> <img src="visualisations/v2/line_food_pop.png" width="400"> <img src="visualisations/v2/line_plant_pop.png" width="400"> <img src="visualisations/v2/line_building_pop.png" width="400">

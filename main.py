@@ -16,6 +16,7 @@ param_reports_v1 = glob('v1/param_reports/*.csv')
 param_reports_v1.sort()
 param_reports_v1_2 = glob('v1_2/param_reports/*.csv')
 param_reports_v2 = glob('v2/param_reports/*.csv')
+param_reports_v2.sort()
 
 
 # Create a list of all summary stats

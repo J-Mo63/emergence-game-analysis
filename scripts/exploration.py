@@ -78,8 +78,11 @@ def line_graph(dfs, x_col, y_col, title, **kwargs):
         # interpolate + smooth
         itp = interp1d(df[x_col], df[y_col], kind='linear')
         yy = savgol_filter(itp(xx), 101, 3)
-
-        label = df_key.replace('param_reports/game_param_report_', '').replace('.csv', '')
+        # Hide the full file path
+        label = df_key
+        if kwargs.get('mask_paths'):
+            for path in kwargs.get('mask_paths'):
+                label = label.replace(path, '').replace('.csv', '')
         style = '--' if i >= 10 else '-'
         plt.plot(xx, yy, style, label=label)
 

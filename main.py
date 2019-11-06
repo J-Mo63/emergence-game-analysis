@@ -17,6 +17,7 @@ param_reports_v1.sort()
 param_reports_v1_2 = glob('v1_2/param_reports/*.csv')
 param_reports_v2 = glob('v2/param_reports/*.csv')
 param_reports_v2.sort()
+param_reports_v2_3 = glob('v2_3/param_reports/*.csv')
 
 
 # Create a list of all summary stats
@@ -87,11 +88,12 @@ def line_graph_params(param_reports):
                        mask_paths=[
                            'v1/param_reports/game_param_report_',
                            'v1_2/param_reports/game_param_report_',
-                           'v2/param_reports/game_param_report_'])
+                           'v2/param_reports/game_param_report_',
+                           'v2_3/param_reports/game_param_report_'])
 
 
 # Run features
-# line_graph_params(param_reports_v2)
+line_graph_params(param_reports_v2_3)
 # correlation_matrix_params(param_reports_v1)
 # animated_heatmap_events(event_df_v2)
 # correlation_matrix_events(event_df_v1)

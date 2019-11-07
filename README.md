@@ -61,6 +61,8 @@ An issue identified in `base_v2` was that it created an overabundance of food. U
 
 ## Final Results
 
+The final results for the analysis are shown below, highlighting all three base versions to illustrate the changes to the game's balance over time.
+
 ### Parameter Check Line Graphs of all Bases
 
 <img src="visualisations/v3/line_tree_pop.png" width="400"> <img src="visualisations/v3/line_dude_pop.png" width="400"> <img src="visualisations/v3/line_food_pop.png" width="400"> <img src="visualisations/v3/line_plant_pop.png" width="400"> <img src="visualisations/v3/line_building_pop.png" width="400">

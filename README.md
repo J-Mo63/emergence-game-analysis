@@ -58,3 +58,9 @@ An issue identified in `base_v2` was that it created an overabundance of food. U
 ### Game World Location Heatmaps
 
 <img src="visualisations/v2_3/heat_tree_spawned.gif" width="400"> <img src="visualisations/v2_3/heat_dude_harvested_resource_tree.gif" width="400"> <img src="visualisations/v2_3/heat_building_spawned.gif" width="400"> <img src="visualisations/v2_3/heat_dude_fixed_building.gif" width="400">
+
+## Final Results
+
+### Parameter Check Line Graphs of all Bases
+
+<img src="visualisations/v3/line_tree_pop.png" width="400"> <img src="visualisations/v3/line_dude_pop.png" width="400"> <img src="visualisations/v3/line_food_pop.png" width="400"> <img src="visualisations/v3/line_plant_pop.png" width="400"> <img src="visualisations/v3/line_building_pop.png" width="400">

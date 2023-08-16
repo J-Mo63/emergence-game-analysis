@@ -1,10 +1,10 @@
 # Emergence Game Analysis
 
-This repository features an unsupervised analysis of emergent game data (which can be viewed [here](https://github.com/J-Mo63/emergence-test-bed)), written in Python. It includes various tools for the pre-processing of game data and the generation of visualisations.
+This repository features an unsupervised analysis of emergent game data (which can be viewed [here](https://github.com/jonjondev/emergence-test-bed)), written in Python. It includes various tools for the pre-processing of game data and the generation of visualisations.
 
 ## Game Version 1 Visualisations
 
-The first iteration of the experiment's codebase can be [viewed under the "v1" tag](https://github.com/J-Mo63/emergence-test-bed/releases/tag/v1), which is defined in the below visuals as test `base_v1`. Each other test is denoted by the format of `<feature_name>_<value_change>` so for instance, a test increasing player speed by 20 would be written as `player_speed_+20`. The animated heatmaps and histograms are only generated for `base_v1` and the correlation matrices include all test results.
+The first iteration of the experiment's codebase can be [viewed under the "v1" tag](https://github.com/jonjondev/emergence-test-bed/releases/tag/v1), which is defined in the below visuals as test `base_v1`. Each other test is denoted by the format of `<feature_name>_<value_change>` so for instance, a test increasing player speed by 20 would be written as `player_speed_+20`. The animated heatmaps and histograms are only generated for `base_v1` and the correlation matrices include all test results.
 
 ### Game World Location Heatmaps
 
@@ -24,7 +24,7 @@ The first iteration of the experiment's codebase can be [viewed under the "v1" t
 
 ## Game Version 2 Visualisations
 
-The second iteration of the experiment's codebase can be [viewed under the "v2" tag](https://github.com/J-Mo63/emergence-test-bed/releases/tag/v2), which is defined in the below visuals as test `base_v2`. It utilises the combination of features from the tests:
+The second iteration of the experiment's codebase can be [viewed under the "v2" tag](https://github.com/jonjondev/emergence-test-bed/releases/tag/v2), which is defined in the below visuals as test `base_v2`. It utilises the combination of features from the tests:
 - dude_speed_+20
 - plant_growth_rate_-5
 
@@ -44,7 +44,7 @@ Using this information, the plant growth rate was reduced from 15 seconds by 5 s
 
 ## Game Version 3 Visualisations
 
-The third iteration of the experiment's codebase can be [viewed under the "v3" tag](https://github.com/J-Mo63/emergence-test-bed/releases/tag/v3), which is defined in the below visuals as test `base_v3`. It utilises the combination of features from the tests:
+The third iteration of the experiment's codebase can be [viewed under the "v3" tag](https://github.com/jonjondev/emergence-test-bed/releases/tag/v3), which is defined in the below visuals as test `base_v3`. It utilises the combination of features from the tests:
 - tree_spawn_+0.4
 - quarry_health_-30
 - food_spawn_rate_-1
